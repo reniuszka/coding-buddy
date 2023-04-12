@@ -11,6 +11,11 @@ export const ButtonStyled: any = styled.button`
   justify-content: center;
   align-items: center;
   margin-left: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2f4454;
+  }
 
   svg {
     /* width: 100%;

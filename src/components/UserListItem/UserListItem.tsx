@@ -8,6 +8,10 @@ type UsersType = {
   attendance?: string | undefined;
 };
 
+const printMyName = (name: string) => {
+  console.log(`my name is ${name}`);
+};
+
 const UserListItem = ({ name, average, attendance = "0%" }: UsersType) => {
   return (
     <Wrapper>
@@ -16,7 +20,7 @@ const UserListItem = ({ name, average, attendance = "0%" }: UsersType) => {
         <p>
           {name}
 
-          <Button />
+          <Button onClick={() => printMyName(name)} />
         </p>
         <p>attendence: {attendance}</p>
       </StyledInfo>
