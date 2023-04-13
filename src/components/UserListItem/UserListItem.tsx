@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Wrapper, Score, StyledInfo } from "./UsersListItem.styles";
 import Button from "../DeleteButton/DeleteButton";
+import { UsersContext } from "../../context/UsersContext";
 
 type UsersType = {
   name: string;
   average: string;
   attendance?: string | undefined;
-  deleteUser: (name: any) => void;
+  // deleteUser: (name: any) => void;
 };
 
 // const printMyName = (name: string) => {
@@ -17,8 +18,9 @@ const UserListItem = ({
   name,
   average,
   attendance = "0%",
-  deleteUser,
-}: UsersType) => {
+}: // deleteUser,
+UsersType) => {
+  const { deleteUser } = useContext(UsersContext);
   return (
     <Wrapper>
       <Score value={average}>{average}</Score>

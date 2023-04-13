@@ -15,13 +15,15 @@ type UserType = {
   attendance: "";
   average: "";
 };
+
+const initialState: UserType = {
+  name: "",
+  attendance: "",
+  average: "",
+};
 const Form = () => {
-  const [isInputValue, setIsInputValue] = useState<UserType>({
-    name: "",
-    attendance: "",
-    average: "",
-  });
-  const { users, setUsers } = useContext(UsersContext);
+  const [isInputValue, setIsInputValue] = useState<UserType>(initialState);
+  const { handleAddUser } = useContext(UsersContext);
   // onChange={(e) => handleChange(e)} - hover over it
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.name, e.target.value);
@@ -35,18 +37,15 @@ const Form = () => {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newUser = {
-      name: isInputValue.name,
-      attendance: isInputValue.attendance,
-      average: isInputValue.average,
-    };
-    setUsers([newUser, ...users]);
-    console.log("newUser added:", newUser);
-    setIsInputValue({
-      name: "",
-      attendance: "",
-      average: "",
-    });
+    handleAddUser(isInputValue);
+    // const newUser = {
+    //   name: isInputValue.name,
+    //   attendance: isInputValue.attendance,
+    //   average: isInputValue.average,
+    // };
+    // setUsers([newUser, ...users]);
+    // console.log("newUser added:", newUser);
+    setIsInputValue(initialState);
   };
   return (
     // <form onSubmit={(e)=> onSubmit(e)}>
