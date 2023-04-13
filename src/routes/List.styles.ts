@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 /* background-color: ${({ theme }) => theme.colors.lightGrey}; */
 export const Wrapper: any = styled.div`
-  background-color: #fff;
+  /* background-color: #f2eff0; */
+  background-color: #376f70;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* max-height: 100vh; */
+  /* height: 100vh; */
   padding: 2rem 0;
 `;

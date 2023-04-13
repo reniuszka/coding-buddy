@@ -1,26 +1,18 @@
 import styled from "styled-components";
-export const ButtonStyled: any = styled.button`
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  /* padding: 1rem; */
-  background-color: #376f70;
+
+export const ButtonStyled = styled.button`
+  margin: 15px 0;
+  padding: 7px 20px;
+  background-color: pink;
+  border-radius: 20px;
   border: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2rem;
+  font-weight: bold;
+  color: #2e151b;
   cursor: pointer;
-
+  margin-top: 2rem;
+  transition: all 0.3s;
   &:hover {
-    background-color: #2f4454;
-  }
-
-  svg {
-    /* width: 100%;
-    height: 100%; */
-    /* padding: 1rem; */
     color: pink;
+    background-color: #2e151b;
   }
 `;

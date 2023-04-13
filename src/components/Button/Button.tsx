@@ -1,16 +1,11 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
 import { ButtonStyled } from "./Button.styles";
 
 type PropTypes = {
-  onClick: () => void;
+  children: React.ReactNode;
 };
-const Button = ({ onClick }: PropTypes) => {
-  return (
-    <ButtonStyled onClick={onClick}>
-      <FaTimes />
-    </ButtonStyled>
-  );
+const Button = ({ children }: PropTypes) => {
+  return <ButtonStyled>{children}</ButtonStyled>;
 };
 
 export default Button;

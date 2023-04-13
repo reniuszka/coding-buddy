@@ -2,9 +2,7 @@ import React from "react";
 import UsersList from "../components/UsersList/UsersList";
 import { Wrapper } from "./List.styles";
 
-type Props = {};
-
-const List = (props: Props) => {
+const List = () => {
   return (
     <Wrapper>
       <UsersList />

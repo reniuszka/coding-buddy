@@ -1,6 +1,6 @@
 import React from "react";
 // import UsersList from "./components/UsersList/UsersList";
-import List from "./pages/List";
+import List from "./routes/List";
 
 function App() {
   return (

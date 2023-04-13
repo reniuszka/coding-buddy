@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper: any = styled.li`
+export const Wrapper = styled.li`
   display: flex;
   align-items: center;
   color: #2e151b;
@@ -28,13 +28,14 @@ export const Wrapper: any = styled.li`
 export const Score: any = styled.div<{ value: number }>`
   width: 2rem;
   height: 2rem;
-  background-color: #da7b93;
+  /* background-color: #da7b93; */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   border-radius: 50%;
   font-weight: bold;
+  color: #fff;
   background: ${(props) => {
     if (props.value > 4) return "#369765";
     if (props.value > 3) return "#f1711c";
